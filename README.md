@@ -1,6 +1,6 @@
 # gInputControllers
 
-![](img\large.png)
+![](https://github.com/ghiboz/gInputControllers/blob/master/img/large.png?raw=true)
 
 Welcome in the docs/help repository for the [gInputControllers](https://www) asset for Unity3D.
 
@@ -22,7 +22,7 @@ Use **GIC** is extremely simple: in the package there's the `GIC.cs` class that 
 The `GIC_Loader.cs` class contains an example on how initalize **GIC** and detect the controllers attached and, for each controller, the number of the analogic axis, the digital buttons and the force feedback.
 
 ### Initialization.
-```
+```CSharp
 if (GIC.Init(ProjectName))
 {
     Debug.Log("gInputControllers initalized!");
@@ -36,24 +36,24 @@ else
 This piece of code initialize **GIC**.
 
 ### Updating.
-```
+```CSharp
 GIC.Update();
 ```
 This piece of code update all the controllers, it update the list `GIC.Controllers` that contains a list of the controllers, containing the info of the controller
-```
+```CSharp
 public string Name;
 public int NumAxis;
 public int NumButtons;
 public bool HasForceFeedback;
 ```
 and a list of the Axis _(Analogic)_ and Buttons _(Digital)_ elements, so if I want read the value of the 2nd axis of the first controller, I just need to do this:
-```
+```CSharp
 var value = GIC.Controllers[0].Axis[1];
 ```
 
 
 ## Value scale.
-* the `Buttons` elements has the value of 0 if is not pressed and 1 if is pressed;
-* the `Axis` elements has the value between -32768 and 32767;
-* the `ForceFeedback` elements accept a value between -10000 and 10000;
+* the `Buttons` elements has the value of **0** if is not pressed and **1** if is pressed;
+* the `Axis` elements has the value between **-32768 and 32767**;
+* the `ForceFeedback` elements accept a value between **-10000 and 10000**;
 
