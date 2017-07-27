@@ -34,6 +34,7 @@ else
 }
 ```
 This piece of code initialize **GIC**.
+
 :warning: the `GIC.Init` function want the name of the project, this is fundamental to manage the handle inside the plugin... the class `GIC_Loader` has a public property to write directly this name.
 
 ### Updating.
